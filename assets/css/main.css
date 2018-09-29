@@ -1,0 +1,51 @@
+﻿:root {
+   /*
+    | To change width of sidebar, change --num-cols. 
+    | Notice how it's responsive to mobile width 
+    | just by changing CSS properties. 
+    */
+   --num-cols: 4;    
+      
+   --last-grid-line-col: calc(var(--num-cols) + 1); 
+   /*--main-first-grid-line: calc(var(--aside-cols) + 1);*/
+   --main-first-grid-line: 1;
+}
+
+@media (max-width: 700px) {
+   :root {
+       --main-first-grid-line: 1; 
+   }    
+}    
+
+html, body {
+	width: 100%;
+	height: 100%;
+	color: black;
+	font-family: helvetica, arial;
+}
+
+div.container {
+   height: 92vh;
+   width: 100vw;
+   display: grid;
+   grid-template-rows: 1fr 4vh;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+main {
+    padding: 1rem;
+    grid-column: 1/5;
+}
+
+
+
+footer {
+   grid-column: 1 / var(--last-grid-line-col);
+   /*
+    | Vertically and horizontally align text in footer.
+    */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top: 1px solid lightgray;
+}
