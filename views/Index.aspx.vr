@@ -15,7 +15,7 @@ BegClass Index Partial(*Yes) Access(*Public) Extends(System.Web.UI.Page)
         DclSrParm sender Type(*Object)
         DclSrParm e Type(System.EventArgs)
 
-        *This.Title = 'RESTful AVR app template'
+        *This.Title = 'RESTful API'
 
         If (NOT Page.IsPostBack)
             //

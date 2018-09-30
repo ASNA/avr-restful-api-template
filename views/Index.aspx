@@ -1,63 +1,48 @@
 ﻿<%@ Page Language="AVR" MasterPageFile="~/BasicMasterPage.master" AutoEventWireup="false" CodeFile="Index.aspx.vr" Inherits="Index" Title="Untitled Page" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" Runat="Server">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" Runat="Server">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+
         <div class="container">
            <main>
-               <h4>REST api examples:</h4>
-               <a href="/api/customers/345">api/customers/345 - get a single entity</a>
-           </main>
-   
-<%--           <aside>
-              aside
-           </aside>--%>
-   
-           <footer>
-              footer   
-           </footer>
-        </div>
+               <h4>Index.aspx page</h4>
+               <p>This page is <code>index.aspx</code> in the <code>views</code> folder. Notice that you don't see <code>index.aspx</code> in the URL. 
+                  ASP.NET's routing engine maps the empty URL to the <code>views/index.aspx</code> page. In this template's master page you can 
+                  see an example of how ASP.NET's 
+                   <a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.ui.control.getrouteurl?view=netframework-4.7.1#System_Web_UI_Control_GetRouteUrl_System_Object_">
+                   <code>GetRouteUrl()</code> 
+                   </a>
+                   method (shown below) is used to fetch a URL by its named route 
+                  (as defined in <code>web.config</code>) for use with the <code>Home</code> link in the navbar above. 
+                  <br />  
+                  <br />  
+                  <code style="margin-left: 2rem;"> &lt;a class="nav-link" href="&lt;%#: GetRouteUrl('home') %>">Home &lt;span class="sr-only">(current)&lt;/&lt;span>&lt;/a></code>
+
+               </p>
+               <br />
+
+               <h4>Example REST api routes in this template:</h4>
+               <p>The URL <code>/api/customers/345</code> doesn't map to an ASPX page. Rather, it uses ASP.NET's routing engine along with the 
+                   <code>ASNAJsonRestRouting.DLL</code> to map the request to a method in a class. This method returns Json. Use the links below
+                   to see examples of the Json returned. These two example requests are HTTP GET requests. However, it is also possible 
+                   issue POST requests (as well as other kinds of requests) to send data to update a data store.
+
+               </p>
+
+               <h5>Get a single customer</h5>
+               <a title="Click this link to show the example Json" href="/api/customers/345">api/customers/345 - get a single entity</a>
+               <br />
+               <h5>Get all customers</h5>
+               <a title="Click this link to show the example Json" href="/api/customers">api/customers - get all customers</a>
+           </main>  
+        </div
+
+
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceHolder" Runat="Server">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <%--<script src="assets/js/flatpickr.js"></script>--%>
 
-    <script>
-        const today = new Date();
-        const fp = flatpickr(document.querySelector("#inputBirthDate"),{"maxDate": today});
-    </script>
 </asp:Content>
 

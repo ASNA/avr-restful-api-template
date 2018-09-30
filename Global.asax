@@ -30,6 +30,7 @@
         // Specify method parts with {x} syntax. Names entered here _must match_ method parameter names.       
         // Add as many routes here as needed. List them in most-specific to most-general order. 
         RestRouter.Get("api/customers/{id}", "ShowAction", *TypeOf(CustomerController)) 
+        RestRouter.Get("api/customers", "ListAction", *TypeOf(CustomerController)) 
 
         // Route recommendations
         //
