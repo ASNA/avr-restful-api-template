@@ -8,7 +8,7 @@ This AVR for .NET ASP.NET RESTful template lets you quickly scaffold up an ASP.N
 
 * [ASP.NET page routing](https://asna.com/us/tech/kb/doc/asp-net-routing)
 * [Json](https://www.copterlabs.com/json-what-it-is-how-it-works-how-to-use-it/) API routing
-* RESTful API endpoints that return Json results
+* [RESTful](https://restfulapi.net/) API endpoints that return Json results
 * [Bootstrap 4](https://getbootstrap.com/) CSS framework
 * [jQuery](https://jquery.com/) JavaScript library
 * [FontAwesome](https://fontawesome.com/) icons
@@ -37,9 +37,9 @@ You can read more about Json here:
 The web is full of articles and blog posts about REST. Here are a few to get you started:
 * [REST API Tutorial](https://restfulapi.net/)
 * [Learn REST: A Tutorial](http://rest.elkstein.org/)
-* [Beginner's tutorial for undersstanding RESTful APIs](https://mlsdev.com/blog/81-a-beginner-s-tutorial-for-understanding-restful-api) 
+* [Beginner's tutorial for understanding RESTful APIs](https://mlsdev.com/blog/81-a-beginner-s-tutorial-for-understanding-restful-api) 
 
-### Basic template output 
+### Template output 
 
 This template is intended to serve as a jumping off place for you to build your own web sites and APIs. To use the template, start a new AVR for .NET ASP.NET project selecting the AVR for .NET ASP.NET RESTful template (as shown below).
 
@@ -50,7 +50,7 @@ When you run the template, it first shows the home page shown below in Figure 1a
 ![](https://asna.com/filebin/marketing/article-figures/restful-template-1.png)
 <br><small> Figure 1a. The RESTful template's home page. </small>
 
-Notice the URL in the browser doesn't include an ASPX page, even though the `views/index.aspx` page is being shown. This is done by the standard, built-in [ASP.NET routing engine](https://asna.com/us/tech/kb/doc/asp-net-routing). We'll take a look at that configuration in a minute. 
+Notice the URL in the browser doesn't include an ASPX page, even though the `views/index.aspx` page is being shown. ASPX page routing done by the built-in [ASP.NET routing engine](https://asna.com/us/tech/kb/doc/asp-net-routing). We'll take a look at that configuration in a minute. 
 
 Clicking on the `api/customers/345` link shows the Json that represents a single customer as shown below in Figure 1b.
 
