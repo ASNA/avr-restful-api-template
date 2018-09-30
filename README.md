@@ -242,6 +242,8 @@ The template presented here includes the example controller shown below in Figur
 
 <br><small>Figure 4. The template's example controller.</small>
 
+> In the interest of presenting example code concisely, the controller class shown above in Figure 4 violates an important application design rule called the [Single Responsibity Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).  There is too much happening in the controller above. Ideally, a repository class would provide the logic for fetching data. The controller's methods should only concern themselves with fetching data from a repository class and returning either the data returned or providing an error condition. 
+
 In a controller class that extends `ASNA.JsonRestRouting.Controller` function return types are implicitly converted to Json (via the Newtonsoft DLL). `ShowAction` returns an instance of the `CustomerEntity` class and `ListAction` returns an array of `CustomerEntity` instances (both of which is also in Figure 4 above). For example purposes these methods hardcode`CustomerEntity` instances; in a production app you'd write code to create these object instances. 
 
 #### For internal use
