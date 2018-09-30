@@ -244,6 +244,8 @@ The template presented here includes the example controller shown below in Figur
 
 In a controller class that extends `ASNA.JsonRestRouting.Controller` function return types are implicitly converted to Json (via the Newtonsoft DLL). `ShowAction` returns an instance of the `CustomerEntity` class and `ListAction` returns an array of `CustomerEntity` instances (both of which is also in Figure 4 above). For example purposes these methods hardcode`CustomerEntity` instances; in a production app you'd write code to create these object instances. 
 
+#### For internal use
 
+    C:\Users\roger\Documents\Programming\AVR\Web\RESTful-Template
 
 
