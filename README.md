@@ -1,5 +1,7 @@
 ﻿## An ASP.NET RESTful API template for ASNA Visual RPG for .NET
 
+> This template is for AVR for .NET 14.x (for use with Visual Studio 2015) but will work as-is with AVR 15.x (for use with Visual Studio 2017). It may work with lower AVR for .NET versions but has not been tested with them. 
+
 Several years ago, Microsoft provided its Web API facility for .NET.  This Web API makes it easy to create RESTful services with C# and VB.NET. This AVR for NET template provides a subset of MS's Web API—intended specifically for AVR. 
 
 In many cases, RESTful services return Json data. Json data is generally fetched with JavaScript and used to dynamically populate a Web page--but it is also used as a data transfer format business-to-business services. When used to populate a page, that resulting Json may be used to populate an autocomplete lookup or a custom grid element like [DataTables](https://datatables.net/) or [Tabulator](http://tabulator.info/).
