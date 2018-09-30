@@ -1,4 +1,6 @@
-﻿Several years ago, Microsoft provided its Web API facility for .NET.  This Web API makes it easy to create RESTful services with C# and VB.NET. This AVR for NET template provides a subset of MS's Web API—intended specifically for AVR. 
+﻿## An ASP.NET RESTful API template for ASNA Visual RPG for .NET
+
+Several years ago, Microsoft provided its Web API facility for .NET.  This Web API makes it easy to create RESTful services with C# and VB.NET. This AVR for NET template provides a subset of MS's Web API—intended specifically for AVR. 
 
 In many cases, RESTful services return Json data. Json data is generally fetched with JavaScript and used to dynamically populate a Web page--but it is also used as a data transfer format business-to-business services. When used to populate a page, that resulting Json may be used to populate an autocomplete lookup or a custom grid element like [DataTables](https://datatables.net/) or [Tabulator](http://tabulator.info/).
 
@@ -24,7 +26,7 @@ This text doesn't attempt to explain REST and routing. Rather it assumes some fa
 
 You can read more about ASP.NET routing here:
 * [MS article on using ASP.NET routing with Web forms](https://msdn.microsoft.com/en-us/library/dd329551.aspx)
-* [An AVR-centric article that discusses using ASP.NET routing]((https://asna.com/us/tech/kb/doc/asp-net-routing) )
+* [An AVR-centric article that discusses using ASP.NET routing](https://asna.com/us/tech/kb/doc/asp-net-routing)
 
 You can read more about Json here:
 
@@ -47,19 +49,19 @@ This template is intended to serve as a jumping off place for you to build your 
 When you run the template, it first shows the home page shown below in Figure 1a. 
 
 ![](https://asna.com/filebin/marketing/article-figures/restful-template-1.png)
-<small> Figure 1a. The RESTful template's home page. </small>
+<br><small> Figure 1a. The RESTful template's home page. </small>
 
 Notice the URL in the browser doesn't include an ASPX page, even though the `views/index.aspx` page is being shown. This is done by the standard, built-in [ASP.NET routing engine](https://asna.com/us/tech/kb/doc/asp-net-routing). We'll take a look at that configuration in a minute. 
 
 Clicking on the `api/customers/345` link shows the Json that represents a single customer as shown below in Figure 1b.
 
 ![](https://asna.com/filebin/marketing/article-figures/restful-template-2.png)
-<small> Figure 1b. Raw Json API output showing a single customer</small>
+<br><small> Figure 1b. Raw Json API output showing a single customer</small>
 
 Clicking on the `api/customers` link shows the Json that represents a list of customers as shown below in Figure 1c.
 
 ![](https://asna.com/filebin/marketing/article-figures/restful-template-3.png)
-<small> Figure 1c. Raw Json API output showing a list of customers</small>
+<br><small> Figure 1c. Raw Json API output showing a list of customers</small>
 
 The raw Json output from a web API is emitted from a method you provided. The ASNA.JsonRestRouting DLL provides the URL routing necessary to invoke that method. The output of a Json API is rarely, if ever, displayed in this raw fashion. It's usually consumed by JavaScript (and maybe a JavaScript library or control to dynamically populate a part of a page with [Ajax](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX). 
 
@@ -99,12 +101,12 @@ Routes are configured in the `Global.asax.vr` source file. It includes two names
         EndSr
 	</script>
 
-<small>Figure 2. The `Global.asax.vr` file is where routes are registered.</small>
+<br><small>Figure 2. The `Global.asax.vr` file is where routes are registered.</small>
 
 To ensure no URL is used as ASP.NET's start page when running your app from inside Visual Studio, be sure to set the `Specific page` to an empty string in your project's Property Pages as shown below in Figure 3. This ensure the `home` route configured in Figure2's code is invoked.
 
 ![](https://asna.com/filebin/marketing/article-figures/set-empty-start-page-avr-asp-net.png)
-<small>Figure 3. Setting your project's start page to an empty string to invoke the `home` route.</small>
+<br><small>Figure 3. Setting your project's start page to an empty string to invoke the `home` route.</small>
 
 #### Configuring ASPX page routes
 
@@ -237,7 +239,7 @@ The template presented here includes the example controller shown below in Figur
 	    DclProp CMPhone     Type(*String) Access(*Public)
 	EndClass
 
-<small>Figure 4. The template's example controller.</small>
+<br><small>Figure 4. The template's example controller.</small>
 
 In a controller class that extends `ASNA.JsonRestRouting.Controller` function return types are implicitly converted to Json (via the Newtonsoft DLL). `ShowAction` returns an instance of the `CustomerEntity` class and `ListAction` returns an array of `CustomerEntity` instances (both of which is also in Figure 4 above). For example purposes these methods hardcode`CustomerEntity` instances; in a production app you'd write code to create these object instances. 
 
