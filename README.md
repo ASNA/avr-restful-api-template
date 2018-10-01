@@ -1,8 +1,9 @@
 ﻿## An ASP.NET RESTful API template for ASNA Visual RPG for .NET
 
-> This template is for AVR for .NET 14.x (for use with Visual Studio 2015) but will work as-is with AVR 15.x (for use with Visual Studio 2017). It may work with lower AVR for .NET versions but has not been tested with them. 
+> This project was created with AVR for .NET 14.x (for use with Visual Studio 2015) but will work as-is with AVR 15.x (for use with Visual Studio 2017). It may work with lower AVR for .NET versions but has not been tested with them. 
 
-Several years ago, Microsoft provided its Web API facility for .NET.  This Web API makes it easy to create RESTful services with C# and VB.NET. This AVR for NET template provides a subset of MS's Web API—intended specifically for AVR. 
+Several years ago, Microsoft provided its Web API facility for .NET.  This Web API makes it easy to create RESTful services with C# and VB.NET. This AVR for NET project provides a subset of MS's Web API—intended specifically for AVR. You can copy this project and use it as the basis for a new project or you can open it and then save it as a template for new projects. [See this article on ASNA.com for instructions how to save an AVR project as a new project template](https://asna.com/us/tech/kb/doc/custom-vs-templates) 
+
 
 In many cases, RESTful services return Json data. Json data is generally fetched with JavaScript and used to dynamically populate a Web page--but it is also used as a data transfer format business-to-business services. When used to populate a page, that resulting Json may be used to populate an autocomplete lookup or a custom grid element like [DataTables](https://datatables.net/) or [Tabulator](http://tabulator.info/).
 
@@ -17,7 +18,6 @@ This AVR for .NET ASP.NET RESTful template lets you quickly scaffold up an ASP.N
 
 > jQuery is included because Bootstrap 4 needs it.  There was a time when jQuery was indespensible. For most cases today it's no longer necessary. Even though this example includes jQuery, it's included only because some of the BootStap 4 components need it (a decision BS4 eecision-makers probably rue now). It's best to try to avoid using jQuery in your code. <a href='http://youmightnotneedjquery.com/'>  See this site for tips</a> on how to avoid needing jQuery.
 
-[See this article on ASNA.com for instructions how to install this template.](https://asna.com/us/tech/kb/doc/custom-vs-templates) 
 
 This template includes two external DLLs:
 
