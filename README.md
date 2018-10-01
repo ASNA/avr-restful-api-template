@@ -2,7 +2,7 @@
 
 > This project was created with AVR for .NET 14.x (for use with Visual Studio 2015) but will work as-is with AVR 15.x (for use with Visual Studio 2017). It may work with lower AVR for .NET versions but has not been tested with them. 
 
-Several years ago, Microsoft provided its Web API facility for .NET.  This Web API makes it easy to create RESTful services with C# and VB.NET. This AVR for NET project provides a subset of MS's Web API—intended specifically for AVR. You can copy this project and use it as the basis for a new project or you can open it and then save it as a template for new projects. [See this article on ASNA.com for instructions how to save an AVR project as a new project template](https://asna.com/us/tech/kb/doc/custom-vs-templates) 
+Several years ago, Microsoft provided its Web API facility for .NET.  This Web API makes it easy to create RESTful services with C# and VB.NET. This AVR for NET project provides a subset of MS's Web API—intended specifically for AVR. You can copy this project and use it as the basis for a new project or you can open it and then save it as a template for new projects. [See this article on ASNA.com for instructions on how to save an AVR project as a new project template.](https://asna.com/us/tech/kb/doc/custom-vs-templates) 
 
 
 In many cases, RESTful services return Json data. Json data is generally fetched with JavaScript and used to dynamically populate a Web page--but it is also used as a data transfer format business-to-business services. When used to populate a page, that resulting Json may be used to populate an autocomplete lookup or a custom grid element like [DataTables](https://datatables.net/) or [Tabulator](http://tabulator.info/).
