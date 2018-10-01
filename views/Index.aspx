@@ -7,6 +7,24 @@
 
         <div class="container">
            <main>
+                <h1 class="mt-5 content-container">AVR for .NET RESTful API template</h1>
+                <p class="lead">This template provides the scaffolding for a RESTful web API that uses <a href="https://getbootstrap.com/">BootStrap 4</a> for its 
+                    ASPX pages' look and feel. <a href="https://jquery.com/">jQuery</a> 
+
+                    <a tabindex="0" data-toggle="popover" data-trigger="focus" 
+                        title="jQuery consideration" style="color:black;" data-html="true"
+                        data-content="There was a time when jQuery was indespensible. For most cases today it's 
+                        no longer necessary. Even though this example includes jQuery, it's included only because
+                        some of the BootStap 4 components need it (a decision BS4 decision-makers probably rue now).
+                        It's best to try to avoid using jQuery in your code. <a href='http://youmightnotneedjquery.com/'>
+                        See this site for tips</a> on how to avoid needing jQuery.">
+                        <span class="fas fa-info-circle"></span>
+                    </a>
+            
+                    and <a href="https://popper.js.org/">Popper</a> are included as BootStap dependencies and 
+                    the free version of <a href="https://fontawesome.com/">FontAwesome</a> is also available (for its SVG icons). 
+                </p>
+
                <h4>Index.aspx page</h4>
                <p>This page is <code>index.aspx</code> in the <code>views</code> folder. Notice that you don't see <code>index.aspx</code> in the URL. 
                   ASP.NET's routing engine maps the empty URL to the <code>views/index.aspx</code> page. In this template's master page you can 
@@ -18,7 +36,7 @@
                   (as defined in <code>web.config</code>) for use with the <code>Home</code> link in the navbar above. 
                   <br />  
                   <br />  
-                  <code style="margin-left: 2rem;"> &lt;a class="nav-link" href="&lt;%#: GetRouteUrl('home') %>">Home &lt;span class="sr-only">(current)&lt;/&lt;span>&lt;/a></code>
+                  <code style="margin-left: 2rem;"> &lt;a class="nav-link" href="&lt;%#: GetRouteUrl('home', *Nothing) %>">Home &lt;span class="sr-only">(current)&lt;/&lt;span>&lt;/a></code>
 
                </p>
                <br />
